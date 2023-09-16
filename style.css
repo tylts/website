@@ -53,4 +53,12 @@ body {
     margin-bottom: -0.5rem;
     margin-top: -0.3rem;
   }
+
+  .upper-text {
+    margin-left: 26px;
+  }
+
+  .lower-text {
+    margin-right: 26px;
+  }
 }
