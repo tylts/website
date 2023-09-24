@@ -1,0 +1,138 @@
+@font-face {
+  font-family: calculator;
+  src: url(digital-7.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(Roboto-Regular.ttf);
+}
+
+:root {
+  --display-equals: #4d5340;
+  --main-background: #c6bba3;
+  --btns-area-background: #979684;
+  --calc-container: #1d1e18;
+  --btn-font: #c6bba3;
+}
+
+html {
+  font-size: 15px;
+}
+
+* {
+  touch-action: manipulation;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  background-color: var(--main-background);
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.2rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+
+.calc-container {
+  width: 450px;
+  margin: 4rem auto;
+  border: 8px outset var(--calc-container);
+  border-radius: 4px;
+  box-shadow: 6px 8px var(--display-equals);
+}
+
+.display-container {
+  display: flex;
+  background-color: var(--calc-container);
+}
+
+#display {
+  background: var(--display-equals);
+  padding: 4px 12px;
+  margin: 1rem;
+  font-size: 3rem;
+  flex: auto;
+  text-align: end;
+  font-family: 'calculator', monospace;
+  font-weight: 100;
+  pointer-events: none;
+  border: 8px inset var(--calc-container);
+  border-radius: 4px;
+}
+
+#info {
+  margin: auto;
+  width: 400px;
+  display: grid;
+  gap: 1rem;
+}
+
+.calculator-buttons {
+  background-color: var(--btns-area-background);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.clear-button {
+  background: #934730;
+}
+
+button {
+  color: var(--btn-font);
+  background: rgb(80, 80, 80);
+  background: linear-gradient(
+    90deg,
+    rgb(66, 66, 66) 0%,
+    var(--calc-container) 100%
+  );
+  border: 8px solid var(--calc-container);
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#equals {
+  background: var(--display-equals);
+  grid-column-start: 3;
+  grid-column-end: span 2;
+  color: var(--btn-font);
+}
+
+@media only screen and (max-width: 450px) {
+  button {
+    padding: 0.6rem 0.4rem;
+    font-size: 1rem;
+    border: 6px solid var(--calc-container);
+    border-radius: 6px;
+  }
+
+  .calculator-buttons {
+    gap: 0.7rem;
+  }
+
+  .calc-container {
+    width: 350px;
+    border: 6px outset var(--calc-container);
+    border-radius: 4px;
+    box-shadow: 6px 8px var(--display-equals);
+  }
+
+  #info {
+    margin: auto;
+    width: 300px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    padding-bottom: 2rem;
+  }
+}

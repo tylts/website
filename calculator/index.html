@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="calculator-interface-symbol.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet preload prefetch"
+      href="digital-7.ttf"
+      as="text/css"
+      type="font/ttf"
+      crossorigin
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="calc-container">
+      <div class="display-container">
+        <div id="display">0</div>
+      </div>
+      <div class="calculator-buttons">
+        <button class="clear-button">C</button>
+        <button class="sign-toggle">+/-</button>
+        <button class="percent-button">%</button>
+        <button class="operator-button">÷</button>
+        <button class="number-button">7</button>
+        <button class="number-button">8</button>
+        <button class="number-button">9</button>
+        <button class="operator-button">×</button>
+        <button class="number-button">4</button>
+        <button class="number-button">5</button>
+        <button class="number-button">6</button>
+        <button class="operator-button">-</button>
+        <button class="number-button">1</button>
+        <button class="number-button">2</button>
+        <button class="number-button">3</button>
+        <button class="operator-button">+</button>
+        <button class="number-button">0</button>
+        <button class="decimal-button">.</button>
+        <button id="equals">=</button>
+      </div>
+    </div>
+    <div id="info">
+      <h1>
+        I know what you're thinking - "Another calculator!?! How is this one any
+        different than the other thousand I've seen?"
+      </h1>
+      <p>
+        Well for starters, this one looks dope. The logic and DOM magic is all
+        coded in vanilla JavaScript and it's styled using basic CSS. I based the
+        functionality on my iPhone's calculator because that's what I had on
+        hand to test it all out.
+      </p>
+      <p>
+        Keep hitting equal after an equation and the calculator will continue
+        evaluating based on the previous calculation. The percent button took me
+        the longest to hack out. The iPhone calculator treats the percent button
+        differently whether it's the first number in the equation or the second;
+        also addition/subtraction vs multiplication/division. I wanted my
+        calculator to reflect that, so for example you'll see that if you type 3
+        and then % the display will show 0.03 which is 3/100. However if you
+        want to increase 3 by 6%, you can type 3 + 6% and the display will
+        immediately show 6% of 3 before adding it all together by hitting the =
+        key. Just TRY IT! Use your keyboard!
+      </p>
+      <p>
+        You can read more on
+        <a href="https://github.com/tylts/calculator" target="_blank"
+          >the github repo</a
+        >.
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
